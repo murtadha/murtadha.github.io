@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<base href="/">-->
+    <base href=".">
+
+    <link rel="shortcut icon" href="https://old.bunny.net/v2/images/favicon.png">
+    <link href="./Diagnostic Report - Bunny Tools_files/css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./Diagnostic Report - Bunny Tools_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Diagnostic Report - Bunny Tools_files/all.min.css">
+    <link rel="stylesheet" href="./Diagnostic Report - Bunny Tools_files/bunnycdn.css">
+    <link rel="stylesheet" href="./Diagnostic Report - Bunny Tools_files/tools.css">
+    <link rel="stylesheet" href="./Diagnostic Report - Bunny Tools_files/tools-map.css">
+    <script type="text/javascript" src="./Diagnostic Report - Bunny Tools_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Diagnostic Report - Bunny Tools_files/jquery.bootstrap-growl.min.js"></script>
+    <script src="./Diagnostic Report - Bunny Tools_files/clipboard.min.js"></script>
+    <script src="./Diagnostic Report - Bunny Tools_files/gsap@latest"></script>
+    <script type="text/javascript" src="./Diagnostic Report - Bunny Tools_files/menu.js"></script>
+    <script type="text/javascript" src="./Diagnostic Report - Bunny Tools_files/base.js"></script>
+    <script type="text/javascript" src="./Diagnostic Report - Bunny Tools_files/diagnostic-report.js"></script>
+    <link rel="stylesheet" href="./Diagnostic Report - Bunny Tools_files/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="./Diagnostic Report - Bunny Tools_files/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        window.getUserAgent = () => {
+            return navigator.userAgent;
+        };
+
+        function init_map(latitude, longitude) {
+            document.getElementById("mapDiv").innerHTML = '<div id="map" style="height: 250px; overflow: hidden;"></div>';
+            const map = L.map('map').setView([latitude, longitude], 11);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            L.marker([latitude, longitude]).addTo(map)
+                .bindPopup('Your Location')
+                .openPopup();
+
+        }
+
+    </script>
+    <title>Diagnostic Report - Bunny Tools</title>
+    <script type="text/default-title"></script>
+</head>
+
+<body>
+    <header id="header d-none" style="display: none;" class="header" b-oa5yhu9zus=""><!--!-->
+        <nav class="navbar navbar-expand-lg navbar-light " b-oa5yhu9zus="">
+            <div class="container" b-oa5yhu9zus=""><a style="position: relative;" class="navbar-brand"
+                    title="bunny.net Homepage" href="https://bunny.net/" b-oa5yhu9zus=""><img alt="bunny.net Logo"
+                        id="bunnycdn-logo" src="./Diagnostic Report - Bunny Tools_files/bunnynet-logo.svg"
+                        b-oa5yhu9zus=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" b-oa5yhu9zus=""><span
+                        class="navbar-toggler-icon" b-oa5yhu9zus=""></span></button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" b-oa5yhu9zus="">
+                    <ul class="navbar-nav ml-auto" b-oa5yhu9zus="">
+                        <li class="nav-item nav-item-spacer " b-oa5yhu9zus=""><a href="https://bunny.net/network"
+                                class="nav-link" b-oa5yhu9zus="">Network</a></li>
+                        <li class="nav-item nav-item-spacer " b-oa5yhu9zus=""><a href="https://bunny.net/pricing"
+                                class="nav-link" b-oa5yhu9zus="">Pricing</a></li>
+
+                        <li id="products-menu-button" class="nav-item" b-oa5yhu9zus=""><a
+                                href="https://tools.bunny.net/#" class="nav-link" b-oa5yhu9zus="">Products <i
+                                    class="far fa-chevron-down"
+                                    style="vertical-align: middle;font-size: 10px;margin-left: 2px;color: #9fa2a5;"
+                                    b-oa5yhu9zus=""></i></a>
+                            <ul b-oa5yhu9zus="">
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/cdn/" b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-rocket"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">CDN</h4>
+                                        <p b-oa5yhu9zus="">Lightning-fast global CDN to supercharge your content.</p>
+                                    </a></li>
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/edge-storage/" b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-th-large"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Edge Storage</h4>
+                                        <p b-oa5yhu9zus="">The world's fastest cloud storage replicated to the edge.</p>
+                                    </a></li>
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/stream/" b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-play"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Stream</h4>
+                                        <p b-oa5yhu9zus="">A better way to deliver online video.</p>
+                                    </a></li>
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/optimizer/" b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-sparkles"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Optimizer</h4>
+                                        <p b-oa5yhu9zus="">Powerful on the fly optimization and image processing.</p>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li id="solutions-menu-button" class="nav-item " b-oa5yhu9zus=""><a
+                                href="https://tools.bunny.net/#" class="nav-link" b-oa5yhu9zus="">Solutions <i
+                                    class="far fa-chevron-down"
+                                    style="vertical-align: middle;font-size: 10px;margin-left: 2px;color: #9fa2a5;"
+                                    b-oa5yhu9zus=""></i></a>
+
+                            <ul b-oa5yhu9zus="">
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/solutions/website-acceleration"
+                                        b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-rocket-launch"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Website Acceleration</h4>
+                                        <p b-oa5yhu9zus="">Supercharge your website with Bunny CDN.</p>
+                                    </a></li>
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/solutions/video-delivery"
+                                        b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-photo-video"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Video Delivery</h4>
+                                        <p b-oa5yhu9zus="">Reliable and affordable video delivery solution.</p>
+                                    </a></li>
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/solutions/software-distribution"
+                                        b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-file-export"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Software Distribution</h4>
+                                        <p b-oa5yhu9zus="">Distribute your software with our fast global network.</p>
+                                    </a></li>
+                                <li b-oa5yhu9zus=""><a href="https://bunny.net/optimizer/transform-api" b-oa5yhu9zus="">
+                                        <div class="icon" b-oa5yhu9zus=""><i class="fad fa-fw fa-crop-alt"
+                                                b-oa5yhu9zus=""></i></div>
+                                        <h4 b-oa5yhu9zus="">Dynamic Image Processing</h4>
+                                        <p b-oa5yhu9zus="">Transform and optimize images on the fly.</p>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item cta" b-oa5yhu9zus=""><a href="https://panel./user/login"
+                                class="nav-link cta" b-oa5yhu9zus="">Log In</a></li>
+                        <li class="nav-item cta" b-oa5yhu9zus=""><a href="https://panel.bunny.net/user/register"
+                                class="nav-link cta navbar-cta-main" b-oa5yhu9zus="">Get Started <i
+                                    class="fa fa-arrow-right" b-oa5yhu9zus=""></i></a></li>
+                    </ul>
+                    <ul class="navbar-nav-cta" b-oa5yhu9zus="">
+                        <li class="nav-item cta" b-oa5yhu9zus=""><a href="https://panel.bunny.net/user/login"
+                                class="nav-link cta" b-oa5yhu9zus="">Log In</a></li>
+                        <li class="nav-item cta" b-oa5yhu9zus=""><a href="https://panel.bunny.net/user/register"
+                                class="nav-link cta navbar-cta-main" b-oa5yhu9zus="">Get Started <i
+                                    class="fa fa-arrow-right" b-oa5yhu9zus=""></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--!-->
+        <div class="sub-nav" b-v22vgotg08="">
+            <div class="container relative" b-v22vgotg08=""><!--!-->
+                <h1 b-v22vgotg08=""><a href="https://tools.bunny.net/" b-v22vgotg08="">Web Tools</a></h1>
+                <ul class="animate__animated animate__faster animate__slideInRight" b-v22vgotg08="">
+                    <li b-v22vgotg08=""><!--!--><a href="https://tools.bunny.net/dns-lookup">DNS Lookup</a></li><!--!-->
+                    <li b-v22vgotg08=""><!--!--><a href="https://tools.bunny.net/latency-test">Latency Test</a></li>
+                    <!--!-->
+                    <li b-v22vgotg08=""><!--!--><a href="https://tools.bunny.net/http-test">HTTP Test</a></li><!--!-->
+                    <li b-v22vgotg08=""><!--!--><a href="https://tools.bunny.net/traceroute">Traceroute</a></li><!--!-->
+                    <!--!-->
+                    <li b-v22vgotg08="">|</li>
+                    <li b-v22vgotg08=""><!--!--><a href="https://tools.bunny.net/other-tools">Other Tools</a></li>
+                    <!--!-->
+                    <li b-v22vgotg08=""><!--!--><a href="https://tools.bunny.net/diagnostic-report" class="active"
+                            aria-current="page">Diagnostic Report</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="hero d-none">
+        <div class="container"><!--!-->
+            <div class="hero-line">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </div>
+
+            <!--!-->
+            <h1>Diagnostic Report</h1>
+            <!--!-->
+            <p id="hero-subtitle">The diagnostic report will collect detailed information about your browser, internet
+                and DNS configuration that can be used for testing connectivity and troubleshooting issues.</p>
+
+            <button class="btn btn-icon btn-secondary btn-diagnostics btn-lg" id="start-button">Run Diagnostic
+                Report</button>
+        </div><!--!-->
+
+        <img src="./Diagnostic Report - Bunny Tools_files/diagnostic-report-hero.svg"
+            class="diagnostic-report-hero-image">
+    </div>
+    <!--!-->
+    <section class="info-list testingArea" id="testingArea" style="background: #fff">
+        <div class="container">
+            <div class="text-center privacy-info">
+                <h4 class="currentStep">Step 1/3: Connection Speed</h4>
+            </div>
+
+            <center class="speedtestArea">
+                <div class="row">
+                    <div class="col-12 col-md-3"></div>
+                    <div class="col-6 col-md-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Standard <span style="display:none" class="prem"><i
+                                            class="fas fa-spinner fa-spin"></i></span></p>
+                                <h4 class="premiumSpeed">-</h4>
+                                <small>Mbit/s</small>
+                            </div>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <div class="col-6 col-md-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Volume <span class="volu" style="display:none"><i
+                                            class="fas fa-spinner fa-spin"></i></span></p>
+                                <h4 class="volumeSpeed">-</h4>
+                                <small>Mbit/s</small>
+                            </div>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <div class="col-12 col-md-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Data Used</p>
+                                <h4 class="dataUsed">-</h4>
+                                <small>MB</small>
+                            </div>
+                        </div>
+
+
+                        <br>
+                    </div>
+                    <div class="col-12 col-md-3"></div>
+                </div>
+
+                <br>
+
+                <svg id="layer-1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 350px" viewBox="0 0 360.22 319.07">
+                    <defs>
+                        <style type="text/css">
+                            .cls-1,
+                            .cls-2,
+                            .cls-4 {
+                                fill: none;
+                            }
+
+                            .cls-1 {
+                                stroke: #223050;
+                                stroke-opacity: 0.5;
+                                stroke-width: 38px;
+                            }
+
+                            .cls-2 {
+                                stroke-width: 40px;
+                                stroke: url(#linear-gradient);
+                            }
+
+                            .cls-3 {
+                                fill-opacity: 1;
+                                fill: url(#linear-gradient-2);
+                            }
+
+                            .cls-5,
+                            .cls-6 {
+                                isolation: isolate;
+                                fill: #3b3b3b;
+                                font-family: Rubik-Bold, Rubik;
+                                font-weight: 700;
+                            }
+
+                            .cls-5 {
+                                font-size: 17.66px;
+                            }
+
+                            .cls-6 {
+                                font-size: 17px;
+                            }
+
+                            .cls-7 {
+                                font-size: 34px;
+                                font-family: Rubik-Regular, Rubik;
+                            }
+
+                            .cls-8 {
+                                letter-spacing: -0.01em;
+                            }
+
+                            .cls-9 {
+                                font-size: 10px;
+                            }
+
+                            .cls-10 {
+                                letter-spacing: -0.01em;
+                            }
+
+                            .cls-11 {
+                                letter-spacing: -0.04em;
+                            }
+                        </style>
+                        <lineargradient id="linear-gradient" x1="19.89" y1="170.09" x2="380.11" y2="170.09"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.16" stop-color="#000039"></stop>
+                            <stop offset="0.18" stop-color="#09053b"></stop>
+                            <stop offset="0.27" stop-color="#422546"></stop>
+                            <stop offset="0.37" stop-color="#75414f"></stop>
+                            <stop offset="0.47" stop-color="#9f5958"></stop>
+                            <stop offset="0.58" stop-color="#c26d5e"></stop>
+                            <stop offset="0.68" stop-color="#dd7c63"></stop>
+                            <stop offset="0.78" stop-color="#f08667"></stop>
+                            <stop offset="0.89" stop-color="#ff9d4c"></stop>
+                            <stop offset="1" stop-color="#ff7853"></stop>
+                        </lineargradient>
+                        <lineargradient id="linear-gradient-2" x1="-753.24" y1="695.04" x2="-752.24" y2="695.04"
+                            gradientTransform="matrix(82.11, -80.52, -16.8, -17.14, 73636.09, -48489.81)"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.29" stop-color="#878787" stop-opacity="0.7"></stop>
+                            <stop offset="0.75" stop-color="#fff"></stop>
+                        </lineargradient>
+                        <lineargradient id="linear-gradient-3" x1="101.86" y1="207.04" x2="199.38" y2="207.04"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.28" stop-color="#000039" stop-opacity="0"></stop>
+                            <stop offset="0.2" stop-color="#10093c" stop-opacity="0"></stop>
+                            <stop offset="0.7" stop-color="#ff8f6a" stop-opacity="0"></stop>
+                        </lineargradient>
+                    </defs>
+                    <path id="path" class="cls-1"
+                        d="M86.91,309.68a160.1,160.1,0,0,1,0-226.43h0A160.11,160.11,0,0,1,313.33,309.68"
+                        transform="translate(-19.89 -16.36)"></path>
+                    <path id="arc" class="cls-2"
+                        d="M86.79,309.68a160.1,160.1,0,0,1,0-226.43h0A160.11,160.11,0,0,1,313.21,309.68"
+                        transform="translate(-19.89 -16.36)"></path>
+                    <polygon id="bigLine" class="cls-3" points="180,168 180,192  80,188  80,172"
+                        style="fill-opacity: 0.9; transform-origin: 0px 0px;" data-svg-origin="175 184.8"
+                        transform="matrix(0.70711,-0.70711,0.70711,0.70711,-79.41818,177.87032)"></polygon>
+                    <line class="cls-4" x1="60.7" y1="295.3" x2="69.33" y2="286.96"></line>
+                    <line class="cls-4" x1="14.11" y1="179.99" x2="26.11" y2="179.99"></line>
+                    <line class="cls-4" x1="62.73" y1="62.61" x2="71.21" y2="71.09"></line>
+                    <line class="cls-4" x1="297.49" y1="62.61" x2="289" y2="71.09"></line>
+                    <line class="cls-4" x1="346.11" y1="179.99" x2="334.11" y2="179.99"></line>
+                    <line class="cls-4" x1="299.52" y1="295.3" x2="290.89" y2="286.96"></line>
+                    <line class="cls-4" x1="180.11" y1="13.99" x2="180.11" y2="25.99"></line>
+                    <text class="cls-5" transform="translate(86.64 274.72) scale(0.97 1)">0</text>
+                    <text class="cls-5" transform="translate(51.11 188.75) scale(0.97 1)">50</text>
+                    <text class="cls-5" transform="translate(81.44 103.39) scale(0.97 1)">100</text>
+                    <text class="cls-5" transform="translate(163.89 64.15) scale(0.97 1)">150</text>
+                    <text class="cls-5" transform="translate(244.24 103.57) scale(0.97 1)">200</text>
+                    <text class="cls-5" transform="translate(278.63 188.75) scale(0.97 1)">250</text>
+                    <text class="cls-6" transform="translate(240.76 274.72) scale(0.97 1)">300</text>
+                    <text class="cls-7" transform="translate(140.43 291.71) scale(0.97 1)"></text>
+                </svg>
+
+
+
+
+                <h5 id="currentSpeed" style="font-weight: bold">0.00</h5>
+                <p>Measured in Mbit/s</p>
+                <p class="popLoc">Please wait...</p>
+            </center>
+            <center class="loadingArea" style="display:none;">
+                <h1><i class="far fa-spinner fa-spin"></i></h1>
+            </center>
+        </div>
+    </section>
+
+    <!--!-->
+    <section id="info-list" class="info-list d-none">
+        <div class="container">
+            <div class="text-center privacy-info">
+                <h3>Which information will be collected?</h3>
+                <p>Worried about privacy? Below are the details about all the information that will be
+                    collected.<br>None of the collected data will remain stored on our servers.</p>
+            </div>
+            <br><br><br>
+            <div class="card-list-transparent">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-img"><img src="./Diagnostic Report - Bunny Tools_files/ip-address.svg"
+                                    alt="IP Icon"></div>
+                            <div class="card-body">
+                                <h4>IP Address</h4>
+                                <p>Your IP address will be collected and mapped to a country and geographical location
+                                    result.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-img"><img src="./Diagnostic Report - Bunny Tools_files/dns.svg"
+                                    alt="DNS Icon"></div>
+                            <div class="card-body">
+                                <h4>DNS Information</h4>
+                                <p>The IP of your DNS provider will be collected and mapped to a country and
+                                    longitude/latitude location.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-img"><img src="./Diagnostic Report - Bunny Tools_files/os.svg"
+                                    alt="OS Icon"></div>
+                            <div class="card-body">
+                                <h4>Operating System</h4>
+                                <p>The name and version of your computer's operating system will be collected.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="card">
+                            <div class="card-img"><img src="./Diagnostic Report - Bunny Tools_files/browser.svg"
+                                    alt="Browser Icon"></div>
+                            <div class="card-body">
+                                <h4>Browser Information</h4>
+                                <p>The name, version and user agent of your web browser will be collected.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--!-->
+    <div id="blazor-error-ui">
+        An error has occurred. This application may no longer respond until reloaded.
+        <a href="https://tools.bunny.net/" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script type="text/javascript" src="./Diagnostic Report - Bunny Tools_files/bunny_tr.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Diagnostic Report - Bunny Tools_files/cookieconsent.min.css">
+    <script src="./Diagnostic Report - Bunny Tools_files/cookieconsent.min.js"></script>
+    <script src="./Diagnostic Report - Bunny Tools_files/blazor.server.js"></script>
+</body>
+
+</html>
