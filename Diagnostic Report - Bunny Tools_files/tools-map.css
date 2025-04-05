@@ -1,0 +1,1381 @@
+.network-map {
+    background-image: url("../img/map4.png");
+    width: 990px;
+    height: 351px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.network-map-small {
+    margin-top: 0;
+    background-image: url("../img/map4.png");
+    margin-left: -30px
+}
+
+.network-pin {
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -8px;
+    top: 50%;
+    left: 50%
+}
+
+    .network-pin::before {
+        background-color: #fff;
+        background-color: #ffffffb0;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        content: ''
+    }
+
+    .network-pin::after {
+        background-color: #888080;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        content: '';
+        margin-left: 4px;
+        margin-top: 4px
+    }
+
+
+.pin-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px
+}
+
+
+    .pin-container span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #000;
+        min-width: 85px;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-top: -65px;
+        height: 30px;
+        margin-left: 32px;
+        z-index: 500;
+        font-weight: 600;
+        font-size: 12px;
+        border-radius: 100px;
+        background-color: #ffffff;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-shadow: #d1e1ea 0 0 40px;
+        white-space: nowrap;
+    }
+    .pin-container span b {
+        margin-top: -1px;
+    }
+        .pin-container span .badge {
+            line-height: 12px;
+        }
+
+.pop-southamerica {
+    background-color: #41c474 !important;
+    color: #fff !important
+}
+
+.pop-asia {
+    background-color: #ea6161 !important;
+    color: #fff !important
+}
+
+.pop-africa {
+    background-color: #9a65c3 !important;
+    color: #fff !important
+}
+
+.pin-container .line {
+    background-color: #515252;
+    margin-top: -25px;
+    height: 1px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    margin-left: -6px;
+    opacity: .35
+}
+
+#le-pin {
+    left: 22%;
+    top: 36.7%
+}
+
+#jp-pin {
+    left: 87.1%;
+    top: 43.6%
+}
+
+#kr-pin {
+    left: 83.3%;
+    top: 41.9%
+}
+
+    #kr-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-left: -30px;
+        margin-top: -35px
+    }
+
+    #kr-pin span {
+        margin-left: -27px;
+        margin-top: -98px
+    }
+
+#syd-pin {
+    left: 90.4%;
+    top: 84.05%
+}
+
+    #syd-pin .line {
+        margin-left: -31px;
+        margin-top: 24px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        width: 61px
+    }
+
+    #syd-pin span {
+        margin-left: -27px;
+        margin-top: 42px
+    }
+
+#de-pin {
+    left: 48.85%;
+    top: 36.4%
+}
+
+    #de-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        margin-top: 0;
+        margin-left: -5px;
+        width: 110px
+    }
+
+    #de-pin span {
+        margin-top: -14px;
+        margin-left: 70px
+    }
+
+#pl-pin {
+    left: 51.85%;
+    top: 34.75%
+}
+
+    #pl-pin .line {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    #pl-pin span {
+        margin-top: -74px;
+        margin-left: 40px
+    }
+
+#se-pin {
+    left: 49.1%;
+    top: 29.7%
+}
+
+    #se-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-top: -35px;
+        margin-left: -40px;
+        width: 79px
+    }
+
+    #se-pin span {
+        margin-top: -104px;
+        margin-left: -18px
+    }
+
+#ams-pin {
+    left: 48.4%;
+    top: 34.4%
+}
+
+    #ams-pin .line {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-left: -107px;
+        width: 125px;
+        margin-top: -45px;
+    }
+
+    #ams-pin span {
+        margin-left: -138px;
+        margin-top: -120px;
+    }
+
+#lt-pin {
+    left: 52.4%;
+    top: 31.5%
+}
+
+    #lt-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-top: -38px;
+        margin-left: -31px;
+        width: 63px
+    }
+
+    #lt-pin span {
+        margin-top: -74px;
+        margin-left: -24px
+    }
+
+#ca-pin {
+    left: 23.4%;
+    top: 38.2%
+}
+
+    #ca-pin .line {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-left: -6px;
+        margin-top: -25px;
+        width: 60px
+    }
+
+    #ca-pin span {
+        margin-left: -9px;
+        margin-top: -74px
+    }
+
+#uk-pin {
+    left: 46.1%;
+    top: 34.9%
+}
+
+    #uk-pin .line {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-left: -55px
+    }
+
+    #uk-pin span {
+        margin-left: -89px;
+        margin-top: -50px
+    }
+
+#fr-pin {
+    left: 47.55%;
+    top: 37%
+}
+
+    #fr-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        width: 90px;
+        margin-top: -1px;
+        margin-left: -96px
+    }
+
+    #fr-pin span {
+        margin-left: -100px;
+        margin-top: -18px
+    }
+
+#ru-pin {
+    left: 57.84%;
+    top: 32%
+}
+
+    #ru-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        margin-top: -1px;
+        margin-left: 6px
+    }
+
+    #ru-pin span {
+        margin-left: 57px;
+        margin-top: -18px
+    }
+
+#bu-pin {
+    left: 53.7%;
+    top: 39.8%
+}
+
+    #bu-pin .line {
+        margin-left: -41px;
+        margin-top: 43px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        width: 82px
+    }
+
+    #bu-pin span {
+        margin-left: -47px;
+        margin-top: 80px;
+    }
+
+#it-pin {
+    left: 49%;
+    top: 39%
+}
+
+    #it-pin span {
+        margin-top: 45px;
+        margin-left: -102px;
+    }
+
+    #it-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#es-pin {
+    left: 45.2%;
+    top: 42.6%
+}
+
+    #es-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        width: 90px;
+        margin-top: -1px;
+        margin-left: -96px
+    }
+
+    #es-pin span {
+        margin-left: -107px;
+        margin-top: -16px
+    }
+
+#ny-pin {
+    left: 25.2%;
+    top: 41%
+}
+
+    #ny-pin span {
+        margin-left: 22px;
+        margin-top: -55px
+    }
+
+#kc-pin {
+    left: 20.7%;
+    top: 42.7%
+}
+
+    #kc-pin span {
+        margin-left: -39px;
+        margin-top: -102px
+    }
+
+    #kc-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-left: -35px;
+        margin-top: -42px;
+        width: 70px
+    }
+
+#sil-pin {
+    left: 11.2%;
+    top: 42.3%
+}
+
+    #sil-pin span {
+        margin-left: -127px;
+        margin-top: -18px
+    }
+
+    #sil-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        width: 90px;
+        margin-top: -1px;
+        margin-left: -96px
+    }
+
+#tx-pin {
+    left: 18.3%;
+    top: 46%
+}
+
+    #tx-pin .line {
+        margin-left: -31px;
+        margin-top: 24px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-left: -46px;
+        margin-top: 44px;
+        width: 93px;
+    }
+
+    #tx-pin span {
+        margin-left: -45px;
+        margin-top: 90px;
+    }
+
+#ga-pin {
+    left: 22%;
+    top: 45%
+}
+
+    #ga-pin span {
+        margin-top: -15px;
+        margin-left: 28px;
+    }
+
+    #ga-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        margin-top: 0;
+        margin-left: 0;
+        width: 50px
+    }
+
+#la-pin {
+    left: 12.5%;
+    top: 44.8%
+}
+
+    #la-pin span {
+        margin-top: 30px;
+        margin-left: -111px
+    }
+
+    #la-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#wa-pin {
+    left: 12%;
+    top: 36%
+}
+
+    #wa-pin span {
+        margin-left: -86px
+    }
+
+    #wa-pin .line {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-left: -55px
+    }
+
+#mi-pin {
+    left: 23%;
+    top: 51%
+}
+
+    #mi-pin .line {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: 21px
+    }
+
+    #mi-pin span {
+        margin-top: 18px;
+        margin-left: 21px
+    }
+
+#sg-pin {
+    left: 77.2%;
+    top: 61.4%
+}
+
+    #sg-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        margin-top: 0;
+        margin-left: -5px;
+        width: 110px
+    }
+
+    #sg-pin span {
+        margin-top: -14px;
+        margin-left: 70px
+    }
+
+#vi-pin {
+    left: 77.4%;
+    top: 52.7%
+}
+
+    #vi-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        margin-top: 0;
+        margin-left: -5px;
+        width: 60px
+    }
+
+    #vi-pin span {
+        margin-top: -14px;
+        margin-left: 50px
+    }
+
+#hk-pin {
+    left: 80.4%;
+    top: 51.7%
+}
+
+    #hk-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        margin-top: 0;
+        margin-left: -5px;
+        width: 60px
+    }
+
+    #hk-pin span {
+        margin-top: -14px;
+        margin-left: 50px
+    }
+
+#th-pin {
+    left: 76.8%;
+    top: 56.7%
+}
+
+    #th-pin span {
+        margin-top: 30px;
+        margin-left: -92px
+    }
+
+    #th-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#in-pin {
+    left: 69.7%;
+    top: 56%
+}
+
+    #in-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-left: -34px;
+        margin-top: -35px;
+        width: 71px
+    }
+
+    #in-pin span {
+        margin-left: -35px;
+        margin-top: -98px
+    }
+
+#cz-pin {
+    left: 50.8%;
+    top: 36.9%
+}
+
+    #cz-pin .line {
+        margin-left: -31px;
+        margin-top: 24px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        width: 61px
+    }
+
+    #cz-pin span {
+        margin-left: -27px;
+        margin-top: 55px
+    }
+
+#brb-pin {
+    left: 91.8%;
+    top: 78.75%
+}
+
+    #brb-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-top: -35px;
+        margin-left: -31px;
+        width: 61px
+    }
+
+    #brb-pin span {
+        margin-top: -65px;
+        margin-left: -33px
+    }
+
+#mel-pin {
+    left: 88.5%;
+    top: 86.3%
+}
+
+    #mel-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #mel-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#per-pin {
+    left: 80.6%;
+    top: 80.75%
+}
+
+    #per-pin span {
+        margin-left: -137px;
+        margin-top: -18px;
+    }
+
+    #per-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        width: 70px;
+        margin-top: -1px;
+        margin-left: -65px
+    }
+
+#auc-pin {
+    left: 98.8%;
+    top: 85.25%
+}
+
+    #auc-pin .line {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        margin-top: -35px;
+        margin-left: -35px;
+        width: 69px
+    }
+
+    #auc-pin span {
+        margin-top: -70px;
+        margin-left: -30px
+    }
+
+#tr-pin {
+    left: 54.8%;
+    top: 42.75%
+}
+
+    #tr-pin .line {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: 21px
+    }
+
+    #tr-pin span {
+        margin-top: 30px
+    }
+
+#br-pin {
+    left: 32.4%;
+    top: 76.15%
+}
+    #br-pin .line {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: 21px;
+    }
+    #br-pin span {
+        margin-left: -16px;
+        margin-top: 31px;
+    }
+#jh-pin {
+    left: 54.4%;
+    top: 77.65%
+}
+
+    #jh-pin .line {
+        margin-left: -31px;
+        margin-top: 24px;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        width: 61px
+    }
+
+    #jh-pin span {
+        margin-left: -46px;
+        margin-top: 55px
+    }
+
+@media(max-width:700px) {
+    .pin-container span {
+        display: none
+    }
+
+    .pin-container .line {
+        display: none
+    }
+
+    .network-pin::before {
+        width: 12px;
+        height: 12px
+    }
+
+    .network-pin::after {
+        width: 6px;
+        height: 6px;
+        margin-left: 3px;
+        margin-top: 3px
+    }
+}
+
+#ca-pin-l {
+    top: 30.7%;
+    left: 21%
+}
+
+#ny-pin-l {
+    left: 22.9%;
+    top: 32.6%
+}
+
+#ga-pin-l {
+    left: 19.9%;
+    top: 35.8%
+}
+
+#tx-pin-l {
+    left: 16.3%;
+    top: 37.5%
+}
+
+#la-pin-l {
+    left: 10.1%;
+    top: 36%
+}
+
+#kc-pin-l {
+    left: 18.5%;
+    top: 33.9%
+}
+
+#jp-pin-l {
+    left: 83.7%;
+    top: 35.1%
+}
+
+#kr-pin-l {
+    left: 81.1%;
+    top: 33.3%
+}
+
+#sg-pin-l {
+    left: 75%;
+    top: 52.8%
+}
+
+#syd-pin-l {
+    left: 87.74%;
+    top: 76.15%
+}
+
+#br-pin-l {
+    left: 30.24%;
+    top: 67.15%
+}
+
+#ru-pin-l {
+    left: 55.34%;
+    top: 23.75%
+}
+
+#es-pin-l {
+    left: 43.1%;
+    top: 33.2%
+}
+
+#uk-pin-l {
+    left: 43.85%;
+    top: 26.1%
+}
+
+#sil-pin-l {
+    left: 9.4%;
+    top: 32.5%
+}
+
+#fr-pin-l {
+    left: 44.85%;
+    top: 28.7%
+}
+
+#ger-pin-l {
+    left: 46.7%;
+    top: 27.4%
+}
+
+#se-pin-l {
+    top: 21%;
+    left: 46.5%
+}
+
+#bu-pin-l {
+    left: 51.28%;
+    top: 31.2%
+}
+
+#wa-pin-l {
+    left: 10.4%;
+    top: 25.5%
+}
+
+#mi-pin-l {
+    left: 20.3%;
+    top: 40.8%
+}
+
+#it-pin-l {
+    left: 46.9%;
+    top: 30%
+}
+
+#jh-pin-l {
+    top: 68.7%;
+    left: 52.3%
+}
+
+#in-pin-l {
+    top: 47.6%;
+    left: 67.5%
+}
+
+#auc-pin-l {
+    left: 96.54%;
+    top: 76.3%
+}
+
+#mel-pin-l {
+    left: 86.34%;
+    top: 77.7%
+}
+
+#per-pin-l {
+    left: 78.34%;
+    top: 72.7%
+}
+
+#brb-pin-l {
+    left: 89.54%;
+    top: 69.7%
+}
+
+#vn-pin-l {
+    left: 75.5%;
+    top: 44.8%
+}
+
+#th-pin-l {
+    left: 74.2%;
+    top: 47.9%
+}
+
+#tr-pin-l {
+    left: 52.28%;
+    top: 33.2%
+}
+
+#pl-pin-l {
+    left: 49.7%;
+    top: 25.7%
+}
+
+#cz-pin-l {
+    left: 48.34%;
+    top: 26.45%
+}
+
+#lt-pin-l {
+    left: 51.4%;
+    top: 23%
+}
+
+#ams-pin-l {
+    left: 45.28%;
+    top: 26.2%
+}
+
+.network-map {
+    width: 1040px;
+    height: 619.968px;
+}
+
+.network-map img {
+    width: 4.5%;
+    position: absolute;
+    opacity: 1
+}
+
+.network-map .double-pin {
+    width: 5.625%
+}
+
+.network-map-table {
+    text-align: left;
+    margin-left: 7%
+}
+
+.network-map-pin-table {
+    position: absolute;
+    left: 5%;
+    bottom: 7%;
+    font-size: 1.5rem;
+    text-shadow: #ddd 0 0 5px
+}
+
+    .network-map-pin-table .budget-pin {
+        font-size: 3rem;
+        color: #5776f6
+    }
+
+    .network-map-pin-table .premium-pin {
+        color: #ffd166;
+        font-size: 3rem
+    }
+
+    .network-map-pin-table span {
+        margin-right: 12px
+    }
+
+@media(min-width:750px) {
+    .network-map-pin-table {
+        font-size: 2rem
+    }
+}
+
+
+
+#mn-pin {
+    top: 37.5%;
+    left: 25.35%
+}
+
+    #mn-pin span {
+        margin-left: -37px;
+        margin-top: -104px
+    }
+
+    #mn-pin .line {
+        transform: rotate(90deg);
+        margin-top: -35px;
+        margin-left: -42px;
+        width: 83px
+    }
+
+#no-pin {
+    left: 48.8%;
+    top: 31.25%
+}
+
+    #no-pin .line {
+        transform: rotate(90deg);
+        margin-top: -21px;
+        margin-left: -25px;
+        width: 49px
+    }
+
+  #no-pin span {
+        margin-top: -64px;
+        margin-left: -31px
+    }
+
+#ky-pin {
+    left: 69.84%;
+    top: 36%
+}
+
+    #ky-pin .line {
+        transform: rotate(90deg);
+        margin-left: -38px;
+        margin-top: -41px;
+        width: 75px;
+    }
+    #ky-pin span {
+        margin-left: -24px;
+        margin-top: -87px;
+    }
+
+#de-pin span {
+    margin-top: -14px;
+    margin-left: 45px
+}
+
+#in-pin span {
+    margin-left: -35px;
+    margin-top: 37px
+}
+
+#in-pin .line {
+    transform: rotate(90deg);
+    margin-left: -29px;
+    margin-top: 28px;
+    width: 58px
+}
+
+#isr-pin {
+    left: 56.7%;
+    top: 48%
+}
+
+#nd-pin {
+    left: 69.8%;
+    top: 52%
+}
+
+#isr-pin .line {
+    transform: rotate(90deg);
+    margin-left: -38px;
+    margin-top: 35px;
+    width: 76px
+}
+
+#isr-pin span {
+    left: 26.4%;
+    top: 93.65%
+}
+
+#nd-pin span {
+    left: 44.4%;
+    top: 66%
+}
+
+#nd-pin .line {
+    transform: rotate(0);
+    margin-left: -5px;
+    margin-top: -2px;
+    width: 32px
+}
+
+#tr-pin span {
+    margin-top: -14px
+}
+
+#tr-pin .line {
+    transform: rotate(0);
+    margin-top: 0
+}
+
+
+
+
+
+#mn-pin {
+    top: 37.5%;
+    left: 25.35%
+}
+
+    #mn-pin span {
+        margin-left: -37px;
+        margin-top: -104px
+    }
+
+    #mn-pin .line {
+        transform: rotate(90deg);
+        margin-top: -35px;
+        margin-left: -42px;
+        width: 83px
+    }
+
+#il-pin {
+    top: 39.8%;
+    left: 21%
+}
+
+    #il-pin .line {
+        transform: rotate(90deg);
+        margin-left: -48px;
+        margin-top: -52px;
+        width: 95px;
+    }
+
+    #il-pin span {
+        margin-top: -127px;
+        margin-left: -69px;
+    }
+
+#no-pin {
+    left: 48.8%;
+    top: 31.25%
+}
+
+    #no-pin .line {
+        transform: rotate(90deg);
+        margin-top: -21px;
+        margin-left: -25px;
+        width: 49px
+    }
+
+    #no-pin span {
+        margin-top: -64px;
+        margin-left: -31px
+    }
+
+#ky-pin {
+    left: 69.84%;
+    top: 36%
+}
+
+#mu-pin {
+    left: 68.7%;
+    top: 54%
+}
+
+    #mu-pin span {
+        left: 10.7%;
+        top: 83%;
+    }
+
+    #mu-pin .line {
+        transform: rotate(-45deg);
+        margin-top: 20px;
+        margin-left: -44px;
+        width: 49px;
+    }
+
+#de-pin span {
+    margin-top: -14px;
+    margin-left: 45px
+}
+
+#in-pin span {
+    margin-left: -35px;
+    margin-top: 37px
+}
+
+#in-pin .line {
+    transform: rotate(90deg);
+    margin-left: -29px;
+    margin-top: 28px;
+    width: 58px
+}
+
+#isr-pin {
+    left: 56.7%;
+    top: 48%
+}
+
+#fi-pin {
+    left: 53.1%;
+    top: 26.7%
+}
+#fi-pin span {
+    margin-left: 37px;
+    margin-top: -76px;
+}
+
+#cl-pin {
+    left: 26.4%;
+    top: 80.15%
+}
+
+    #cl-pin span {
+        margin-left: -115px;
+        margin-top: 40px;
+    }
+
+    #cl-pin .line {
+        margin-left: -52px;
+        margin-top: 22px;
+    }
+
+#ae-pin {
+    left: 62.7%;
+    top: 52%
+}
+    #ae-pin span {
+        margin-top: -35px;
+        margin-left: 9px;
+    }
+    #ae-pin .line {
+        width: 30px;
+        margin-left: -4px;
+        margin-top: -10px;
+    }
+
+#ng-pin {
+    left: 47.4%;
+    top: 60.65%
+}
+
+    #ng-pin span {
+        left: 26.4%;
+        top: 85.65%
+    }
+
+    #ng-pin .line {
+        transform: rotate(90deg);
+        margin-left: -29px;
+        margin-top: 28px;
+        width: 58px
+    }
+
+#nd-pin {
+    left: 69.8%;
+    top: 52%
+}
+
+#isr-pin .line {
+    transform: rotate(90deg);
+    margin-left: -38px;
+    margin-top: 35px;
+    width: 76px
+}
+
+#isr-pin span {
+    left: 26.4%;
+    top: 93.65%
+}
+
+#nd-pin span {
+    left: 44.4%;
+    top: 66%
+}
+
+#nd-pin .line {
+    transform: rotate(0);
+    margin-left: -5px;
+    margin-top: -2px;
+    width: 32px
+}
+
+#tr-pin span {
+    margin-top: -14px
+}
+
+#tr-pin .line {
+    transform: rotate(0);
+    margin-top: 0
+}
+
+
+#ade-pin {
+    left: 87%;
+    top: 84%;
+}
+
+    #ade-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #ade-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#gr-pin {
+    left: 53%;
+    top: 43.7%;
+}
+
+    #gr-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #gr-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#asb-pin {
+    left: 24.5%;
+    top: 42.4%;
+}
+
+    #asb-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #asb-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#den-pin {
+    left: 16.5%;
+    top: 41.4%;
+}
+
+    #den-pin .line {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        width: 90px;
+        margin-top: -1px;
+        margin-left: -96px
+    }
+
+    #den-pin span {
+        margin-left: -147px;
+        margin-top: -16px
+    }
+
+#va-pin {
+    left: 12%;
+    top: 34.4%;
+}
+
+    #va-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #va-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#vi-pin {
+    left: 52.8%;
+    top: 32.6%;
+}
+
+    #vi-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #vi-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+#zu-pin {
+    left: 48.7%;
+    top: 37.8%;
+}
+
+    #zu-pin span {
+        margin-top: 30px;
+        margin-left: -105px
+    }
+
+    #zu-pin .line {
+        margin-left: -52px;
+        margin-top: 22px
+    }
+
+
+.error-style {
+    color: #d40404 !important;
+}
